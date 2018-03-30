@@ -8,7 +8,7 @@ RUN dnf -y install exim
 
 EXPOSE 25 465 587
 
-VOLUME /etc/exim /var/spool/exim /var/log/exim
+VOLUME /etc/exim /var/log/exim /var/spool/exim /var/spool/mail
 
 ENTRYPOINT ["/usr/sbin/exim", "-bdf", "-q30m"]
 
